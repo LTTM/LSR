@@ -17,7 +17,7 @@ from datasets.crosscity_Dataset import CrossCity_DataLoader, CrossCity_Dataset
 from datasets.cityscapes_Dataset import City_Dataset, inv_preprocess, decode_labels
 
 from utils.losses import normAlignment, perpendicularity, clustering, vectorsExtractor, predHistDown, predNNDown, predPDDown
-from tools.train_source import Trainer, str2bool, argparse, add_train_args, init_args, datasets_path
+from tools.train_source import Trainer, str2bool, argparse, add_train_args, init_args
 
 class UDATrainer(Trainer):
 
