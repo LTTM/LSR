@@ -1,5 +1,5 @@
 # Latent Space Regularization for Unsupervised Domain Adaptation in Semantic Segmentation
-This is the official PyTorch implementation of our works: "Latent Space Regularization for Unsupervised Domain Adaptation in Semantic Segmentation" presented at the CVPR2021 Workshop on Autonomous Driving and "Adapting Segmentation Networks to New Domains by Disentangling Latent Representations" submitted to IEEE Transactions on Multimedia.
+This is the official PyTorch implementation of our works: "Latent Space Regularization for Unsupervised Domain Adaptation in Semantic Segmentation" presented at the CVPR2021 Workshop on Autonomous Driving and "Road Scenes Segmentation Across Different Domains by Disentangling Latent Representations" submitted to IEEE Transactions on Emerging Topics in Computational Intelligence.
 
 In this paper we propose an effective Unsupervised Domain Adaptation (UDA) strategy, based on feature clustering, perpendicularity and norm alignment objectives to reach a regularized disposition of latent embeddings, while providing a semantically consistent domain alignment over the feature space.
 
