@@ -20,7 +20,7 @@ from datasets.cityscapes_Dataset import City_Dataset, City_DataLoader, inv_prepr
 from datasets.gta5_Dataset import GTA5_DataLoader
 from datasets.synthia_Dataset import SYNTHIA_DataLoader
 
-from utils.losses import normAlignment, perpendicularity, clustering, vectorsExtractor, predHistDown, predNNDown, BalancedCrossEntropy
+from utils.losses import normAlignment, perpendicularity, clustering, vectorsExtractor, predHistDown, predNNDown
 
 def str2bool(v):
     if v.lower() in ('yes', 'true', 't', 'y', '1'):
