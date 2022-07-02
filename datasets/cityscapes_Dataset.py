@@ -294,8 +294,8 @@ class City_Dataset(data.Dataset):
     def _val_sync_transform(self, img, mask):
         if self.resize:
             img = img.resize(self.base_size, Image.BICUBIC)
-            if not self.args.fullres_labels:
-                mask = mask.resize(self.base_size, Image.NEAREST)
+            #if not self.args.fullres_labels:
+            mask = mask.resize(self.base_size, Image.NEAREST)
 
         # apply shared transformations and convert to tensor
         img, (mask, mask_down) = self._img_transform(img), self._mask_transform(mask)
