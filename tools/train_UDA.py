@@ -16,7 +16,7 @@ from datasets.gta5_Dataset import GTA5_Dataset
 from datasets.crosscity_Dataset import CrossCity_DataLoader, CrossCity_Dataset
 from datasets.cityscapes_Dataset import City_Dataset, inv_preprocess, decode_labels
 
-from utils.losses import normAlignment, perpendicularity, clustering, vectorsExtractor, predHistDown, predNNDown, predPDDown
+from utils.losses import IW_MaxSquareloss, normAlignment, perpendicularity, clustering, vectorsExtractor, predHistDown, predNNDown, predPDDown
 from tools.train_source import Trainer, str2bool, argparse, add_train_args, init_args
 
 class UDATrainer(Trainer):
@@ -423,7 +423,7 @@ def add_UDA_train_args(arg_parser):
     arg_parser.add_argument('--source_dataset', default='gta5', type=str, choices=['gta5', 'synthia', 'cityscapes'], help='source dataset choice')
     arg_parser.add_argument('--source_split', default='train', type=str, help='source datasets split')
     arg_parser.add_argument('--init_round', type=int, default=0, help='init_round')
-    arg_parser.add_argument('--round_num', type=int, default=1, help="num round")
+    arg_parser.add_argument('--round_num', type=int, default=10, help="num round")
     arg_parser.add_argument('--epoch_each_round', type=int, default=2, help="epoch each round")
 
     arg_parser.add_argument('--logging_interval', type=int, default=250, help="interval in steps for logging")
@@ -435,9 +435,9 @@ def add_UDA_train_args(arg_parser):
     arg_parser.add_argument('--target_down', type=str, default='doubleproto', choices = ['same', 'proto', 'doubleproto'], help="type of downsampling to use for target feature-level maps")
 
     # update default values
-    arg_parser.add_argument('--lambda_norm', default=0.025, type=float, help="lambda of norm loss")
-    arg_parser.add_argument('--lambda_cluster', default=0.1, type=float, help="lambda of clustering loss")
-    arg_parser.add_argument('--lambda_ortho', default=0.2, type=float, help="lambda of orthogonality loss")
+    # arg_parser.add_argument('--lambda_norm', default=0.025, type=float, help="lambda of norm loss")
+    # arg_parser.add_argument('--lambda_cluster', default=0.1, type=float, help="lambda of clustering loss")
+    # arg_parser.add_argument('--lambda_ortho', default=0.2, type=float, help="lambda of orthogonality loss")
 
     # entropy loss
     arg_parser.add_argument('--lambda_entropy', type=float, default=0., help="lambda of target loss")
