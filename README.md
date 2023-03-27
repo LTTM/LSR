@@ -110,6 +110,13 @@ GTA5-to-Cityscapes with ResNet101:
 ## Cite us
 If you use this repository, please consider to cite us
 
+    @article{barbato2021road,
+        title   = {Road scenes segmentation across different domains by disentangling latent representations},
+        author  = {Barbato, Francesco and Michieli, Umberto and Toldo, Marco and Zanuttigh, Pietro},
+        journal = {arXiv preprint arXiv:2108.03021},
+        year    = {2021}
+    }
+
     @InProceedings{barbato2021latent,
     author    = {Barbato, Francesco and Toldo, Marco and Michieli, Umberto and Zanuttigh, Pietro},
     title     = {Latent Space Regularization for Unsupervised Domain Adaptation in Semantic Segmentation},
